@@ -67,9 +67,9 @@ function LoginForm() {
             S'inscrire
           </Link>
         </p>
-        <p className="text-center text-xs text-coquillage/30 mt-8">
+        {/* <p className="text-center text-xs text-coquillage/30 mt-8">
           Démo admin : ecobloom60@gmail.com / admin1234
-        </p>
+        </p> */}
       </div>
     </div>
   );
