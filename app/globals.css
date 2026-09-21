@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  /* Nuit Lagune — deep teal-black base, evokes the lagoon at dusk in Grand-Popo */
+  --bloom-lagune: #0f2620;
+  --bloom-lagune-deep: #0a1a16;
+  /* Sable Chaud — warm sand for light sections */
+  --bloom-sable: #f4e9d6;
+  /* Bougainvillier — magenta-pink primary accent */
+  --bloom-bougainvillier: #c9407a;
+  --bloom-bougainvillier-deep: #a3325f;
+  /* Or Grand-Popo — gold, growth / savings */
+  --bloom-or: #d9a441;
+  /* Vert Feuille — supporting leaf green */
+  --bloom-feuille: #4c7a5e;
+  /* Blanc Coquillage — off-white for text on dark */
+  --bloom-coquillage: #fbf6ee;
+
+  --font-display-family: var(--font-display), "Fraunces", serif;
+  --font-body-family: var(--font-body), "Work Sans", sans-serif;
+  --font-mono-family: var(--font-mono), "IBM Plex Mono", monospace;
+}
+
+@theme inline {
+  --color-lagune: var(--bloom-lagune);
+  --color-lagune-deep: var(--bloom-lagune-deep);
+  --color-sable: var(--bloom-sable);
+  --color-bougainvillier: var(--bloom-bougainvillier);
+  --color-bougainvillier-deep: var(--bloom-bougainvillier-deep);
+  --color-or: var(--bloom-or);
+  --color-feuille: var(--bloom-feuille);
+  --color-coquillage: var(--bloom-coquillage);
+
+  --font-display: var(--font-display-family);
+  --font-body: var(--font-body-family);
+  --font-mono: var(--font-mono-family);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body-family);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--bloom-or);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--bloom-bougainvillier);
+  color: var(--bloom-coquillage);
+}
